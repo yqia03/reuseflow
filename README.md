@@ -1,11 +1,13 @@
-# 就地取材 · TRAE 比赛 Demo
+# 拾用 · ReuseFlow
 
-> **已停止维护。** 本项目于 2026 年 9 月 12 日为 TRAE 比赛制作，现仅保留在仓库中，供作品展示与代码参考。自 2026 年 9 月 13 日起，不再更新功能、修复问题或提供维护支持。
+**AI 生活资源规划助手**
 
-「就地取材」是一个生活资源再利用 Demo：拍照或手动录入家里的食材、闲置物品，确认清单后，生成晚餐菜单或旧物改造方案，展示材料用量、操作步骤和缺料替代。
+「拾用（ReuseFlow）」通过照片或手动输入整理家里的食材与闲置物品，确认清单后，生成晚餐菜单或旧物改造方案，展示材料用量、操作步骤和缺料替代。项目展示了从资源识别、人工确认到结构化方案生成与用量校验的完整流程。
 
-- [GitHub 仓库](https://github.com/yqia03/trae_gp)
-- [比赛在线演示](https://yqia03.github.io/trae_gp/)（GitHub Pages，保留比赛版本）
+> **TRAE 比赛 Demo · 已停止维护。** 本项目原名「就地取材」，于 2026 年 9 月 12 日为 TRAE 比赛制作，自 2026 年 9 月 13 日起停止功能更新、问题修复与维护支持。现以「拾用 · ReuseFlow」作为作品集展示名称，保留源码与演示供参考。
+
+- [GitHub 仓库](https://github.com/yqia03/reuseflow)
+- [在线演示](https://yqia03.github.io/reuseflow/)（GitHub Pages，保留比赛 Demo 功能）
 
 ## 保留的演示功能
 
@@ -23,8 +25,8 @@
 保留版本使用 Node.js 22.18+ 和 npm：
 
 ```bash
-git clone https://github.com/yqia03/trae_gp.git
-cd trae_gp
+git clone https://github.com/yqia03/reuseflow.git
+cd reuseflow
 npm ci
 npm run dev
 ```

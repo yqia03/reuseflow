@@ -4,7 +4,7 @@ import path from "node:path";
 import { spawnSync } from "node:child_process";
 
 const root = process.cwd();
-const stage = await mkdtemp(path.join(tmpdir(), "jdqc-pages-"));
+const stage = await mkdtemp(path.join(tmpdir(), "reuseflow-pages-"));
 for (const file of ["package.json", "tsconfig.json", "postcss.config.mjs", "public", "src"]) {
   await cp(path.join(root, file), path.join(stage, file), {
     recursive: true,
@@ -13,8 +13,8 @@ for (const file of ["package.json", "tsconfig.json", "postcss.config.mjs", "publ
 }
 await symlink(path.join(root, "node_modules"), path.join(stage, "node_modules"), "dir");
 await writeFile(path.join(stage, "next.config.mjs"), `export default {
-  output: "export", basePath: "/trae_gp", images: { unoptimized: true },
-  env: { NEXT_PUBLIC_DEMO_ONLY: "true", NEXT_PUBLIC_BASE_PATH: "/trae_gp" }
+  output: "export", basePath: "/reuseflow", images: { unoptimized: true },
+  env: { NEXT_PUBLIC_DEMO_ONLY: "true", NEXT_PUBLIC_BASE_PATH: "/reuseflow" }
 };`);
 const build = spawnSync(process.execPath, [path.join(root, "node_modules/next/dist/bin/next"), "build", "--webpack"], {
   cwd: stage, stdio: "inherit", env: { ...process.env, NEXT_TELEMETRY_DISABLED: "1" },

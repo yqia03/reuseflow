@@ -399,7 +399,7 @@ export default function Home() {
   const copyPlan = async () => {
     if (!result) return;
     const src = sourceLabel(result.envelope.source);
-    const lines: string[] = [`【就地取材】来源:${src}`, `输入:${rows.map((r) => `${r.name}${r.quantitySource ? "约" : ""}${r.quantity}${UNIT_LABEL[r.unit]}`).join("、")}`];
+    const lines: string[] = [`【拾用 · ReuseFlow】来源:${src}`, `输入:${rows.map((r) => `${r.name}${r.quantitySource ? "约" : ""}${r.quantity}${UNIT_LABEL[r.unit]}`).join("、")}`];
     if (rows.some((r) => r.quantitySource)) lines.push("部分用量为估算，资源余量也按估算计算，可按实际份量调整。");
     if (mealData) {
       lines.push(`预计 ${mealData.estimatedMinutes} 分钟`);
@@ -434,8 +434,8 @@ export default function Home() {
       {/* 顶栏 */}
       <header className="flex items-center justify-between px-6 h-16 border-b border-line">
         <div className="flex items-baseline gap-3">
-          <span className="serif text-2xl font-bold">就地取材</span>
-          <span className="text-secondary text-sm hidden sm:inline">把家里已有的，变成今天用得上的</span>
+          <span className="serif text-2xl font-bold">拾用<span className="hidden sm:inline"> · ReuseFlow</span></span>
+          <span className="text-secondary text-sm hidden sm:inline">AI 生活资源规划助手</span>
         </div>
         <div className="flex gap-2">
           <button onClick={() => loadDemo("meal")} className="min-h-11 px-4 rounded-full border border-borderctl text-sm text-secondary hover:text-cream">
